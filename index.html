@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f1e7">
+  <meta name="description" content="用一杯茶的時間，認識台灣茶的風味與日常。">
+  <title>台灣茶小誌｜一杯茶，慢慢認識</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="台灣茶小誌首頁"><span class="brand-mark">茶</span><span>台灣茶小誌</span></a>
+    <nav aria-label="主要導覽"><a href="#collection">茶款索引</a><a href="#ritual">沖泡筆記</a></nav>
+    <a class="topbar-note" href="#about">把日子泡慢一點 <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> TAIWAN TEA FIELD NOTES · VOL. 01</p>
+        <h1 id="hero-title">一杯茶，<br>慢慢<span>認識。</span></h1>
+        <p class="hero-intro">從山霧裡長出的葉子，到桌上那只溫熱的杯子。收集台灣茶的風味、故事，還有每個人自己的沖泡節奏。</p>
+        <a class="text-link" href="#collection">翻開茶款索引 <span aria-hidden="true">↓</span></a>
+        <div class="hero-footnote"><span class="rule"></span> 留一點時間，給一杯正在變化的茶。</div>
+      </div>
+      <div class="hero-art" aria-label="以茶葉與山形構成的插畫" role="img">
+        <div class="sun"></div><div class="mountain mountain-back"></div><div class="mountain mountain-front"></div>
+        <div class="steam steam-one"></div><div class="steam steam-two"></div>
+        <div class="cup"><div class="tea-surface"></div><div class="cup-handle"></div></div>
+        <div class="art-caption">01 / THE FIRST POUR</div>
+        <span class="art-leaf leaf-one">✳</span><span class="art-leaf leaf-two">✳</span>
+      </div>
+      <div class="hero-index">EST. IN EVERY SLOW MORNING <span>⌁</span> TAIWAN</div>
+    </section>
+
+    <section class="collection section-wrap" id="collection" aria-labelledby="collection-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">A SMALL GUIDE TO BIG FLAVORS</p><h2 id="collection-title">先從你喜歡的<span>味道</span>開始</h2></div>
+        <p class="section-aside">每一款茶都有自己的個性。<br>點開卡片，看看它適合怎麼陪你。</p>
+      </div>
+      <div class="filter-row" role="group" aria-label="依茶類篩選">
+        <span class="filter-label">挑一種茶感</span><div class="filters" id="filters"></div>
+        <span class="result-count" id="result-count" aria-live="polite"></span>
+      </div>
+      <div class="tea-grid" id="tea-grid"></div>
+      <p class="no-results" id="no-results" hidden>這一類還在採集筆記中，先看看其他茶款吧。</p>
+    </section>
+
+    <section class="ritual" id="ritual">
+      <div class="ritual-inner">
+        <div class="ritual-number">FIELD NOTE <b>01</b></div>
+        <div class="ritual-copy"><p class="eyebrow">A GOOD PLACE TO BEGIN</p><h2>沖泡沒有標準答案，<br>只有你的<span>剛剛好。</span></h2><p>先用手邊的杯子和熱水開始。茶葉多一點、浸久一點，味道就更濃；少一點、快一點，茶湯就更清爽。把每次的變化記下來，慢慢找到喜歡的比例。</p><a href="#collection" class="text-link">挑一款茶試試 <span aria-hidden="true">→</span></a></div>
+        <div class="ritual-stamp" aria-hidden="true"><span>慢慢泡</span><b>TEA<br>TIME</b><span>慢慢喝</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="about"><a class="brand" href="#top"><span class="brand-mark">茶</span><span>台灣茶小誌</span></a><p>把日常泡成喜歡的樣子。</p><span class="footer-credit">一份持續採集中的風味筆記 <span>✳</span></span></footer>
+
+  <dialog class="tea-dialog" id="tea-dialog" aria-labelledby="dialog-title">
+    <form method="dialog"><button class="dialog-close" aria-label="關閉茶款詳情">×</button></form>
+    <div class="dialog-art" id="dialog-art"></div>
+    <div class="dialog-content"><p class="eyebrow" id="dialog-category"></p><h2 id="dialog-title"></h2><p class="dialog-description" id="dialog-description"></p><div class="dialog-flavors" id="dialog-flavors"></div><div class="dialog-details"><div><span>常見產區</span><b id="dialog-origin"></b></div><div><span>氧化程度</span><b id="dialog-oxidation"></b></div></div><div class="brew-note"><span>BREWING NOTE</span><p id="dialog-brew"></p></div></div>
+  </dialog>
+</body>
+</html>
